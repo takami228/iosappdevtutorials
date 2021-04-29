@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct EditView: View {
-    @State private var scrumData: DailyScrum.Data = DailyScrum.Data()
+    @Binding var scrumData: DailyScrum.Data
     @State private var newAttendee = ""
-    
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
@@ -25,7 +24,7 @@ struct EditView: View {
                         .accessibilityHidden(true)
                 }
                 ColorPicker("Color", selection: $scrumData.color)
-                    .accessibilityLabel(Text("Color picker"))
+                    .accessibilityLabel(Text("color picker"))
             }
             Section(header: Text("Attendees")) {
                 ForEach(scrumData.attendees, id: \.self) { attendee in
@@ -39,11 +38,11 @@ struct EditView: View {
                     Button(action: {
                         withAnimation {
                             scrumData.attendees.append(newAttendee)
-                            newAttendee = ""
                         }
+                        newAttendee = ""
                     }) {
                         Image(systemName: "plus.circle.fill")
-                            .accessibilityLabel(Text("Add attendee"))
+                            .accessibilityLabel(Text("add attendee"))
                     }
                     .disabled(newAttendee.isEmpty)
                 }
@@ -55,6 +54,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView()
+        EditView(scrumData: .constant(DailyScrum.data[0].data))
     }
 }
