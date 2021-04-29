@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112CA817263A9D3B00657D81 /* MeetingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CA816263A9D3B00657D81 /* MeetingTimerView.swift */; };
 		AA13BBBF24F567AA005EB048 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13BBBE24F567AA005EB048 /* EditView.swift */; };
 		AA13BBC124F56EA9005EB048 /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13BBC024F56EA9005EB048 /* ScrumProgressViewStyle.swift */; };
 		AA13BBC324F56EDB005EB048 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13BBC224F56EDB005EB048 /* ScrumTimer.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112CA816263A9D3B00657D81 /* MeetingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTimerView.swift; sourceTree = "<group>"; };
 		AA13BBBE24F567AA005EB048 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		AA13BBC024F56EA9005EB048 /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumProgressViewStyle.swift; sourceTree = "<group>"; };
 		AA13BBC224F56EDB005EB048 /* ScrumTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				AA8ACE8324F44E01007DA4D8 /* ScrumdingerApp.swift */,
 				AA8ACE8524F44E01007DA4D8 /* MeetingView.swift */,
 				AA5719D924F57DA3002316EB /* MeetingFooterView.swift */,
+				112CA816263A9D3B00657D81 /* MeetingTimerView.swift */,
 				AA5719D724F57D59002316EB /* MeetingHeaderView.swift */,
 				AA65BF4824F4636E007E4A1B /* CardView.swift */,
 				AA65BF4A24F4671D007E4A1B /* ScrumsView.swift */,
@@ -207,6 +210,7 @@
 				AA13BBBF24F567AA005EB048 /* EditView.swift in Sources */,
 				AA5719D824F57D59002316EB /* MeetingHeaderView.swift in Sources */,
 				AAD1604124F59EC40014DFC3 /* ScrumData.swift in Sources */,
+				112CA817263A9D3B00657D81 /* MeetingTimerView.swift in Sources */,
 				AA5719DA24F57DA3002316EB /* MeetingFooterView.swift in Sources */,
 				AA13BBC824F56FC6005EB048 /* AVPlayer+Ding.swift in Sources */,
 				AA8ACE8624F44E01007DA4D8 /* MeetingView.swift in Sources */,
