@@ -1,9 +1,6 @@
-//
-//  Code+Codablea.swift
-//  Scrumdinger
-//
-//  Created by takami228 on 2021/04/29.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 
 import SwiftUI
 

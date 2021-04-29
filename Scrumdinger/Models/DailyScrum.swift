@@ -1,10 +1,6 @@
-//
-//  DailyScrum.swift
-//  Scrumdinger
-//
-//  Created by takami228 on 2021/04/29.
-//
-
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 import SwiftUI
 
 struct DailyScrum: Identifiable {
@@ -13,13 +9,15 @@ struct DailyScrum: Identifiable {
     var attendees: [String]
     var lengthInMinutes: Int
     var color: Color
+    var history: [History]
 
-    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, color: Color) {
+    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, color: Color, history: [History] = []) {
         self.id = id
         self.title = title
         self.attendees = attendees
         self.lengthInMinutes = lengthInMinutes
         self.color = color
+        self.history = history
     }
 }
 

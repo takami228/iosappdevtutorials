@@ -1,9 +1,6 @@
-//
-//  EditView.swift
-//  Scrumdinger
-//
-//  Created by takami228 on 2021/04/29.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
@@ -24,7 +21,7 @@ struct EditView: View {
                         .accessibilityHidden(true)
                 }
                 ColorPicker("Color", selection: $scrumData.color)
-                    .accessibilityLabel(Text("color picker"))
+                    .accessibilityLabel(Text("Color picker"))
             }
             Section(header: Text("Attendees")) {
                 ForEach(scrumData.attendees, id: \.self) { attendee in
@@ -38,11 +35,11 @@ struct EditView: View {
                     Button(action: {
                         withAnimation {
                             scrumData.attendees.append(newAttendee)
+                            newAttendee = ""
                         }
-                        newAttendee = ""
                     }) {
                         Image(systemName: "plus.circle.fill")
-                            .accessibilityLabel(Text("add attendee"))
+                            .accessibilityLabel(Text("Add attendee"))
                     }
                     .disabled(newAttendee.isEmpty)
                 }

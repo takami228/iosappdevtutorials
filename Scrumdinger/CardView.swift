@@ -1,9 +1,6 @@
-//
-//  CardView.swift
-//  Scrumdinger
-//
-//  Created by takami228 on 2021/04/29.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
@@ -14,7 +11,7 @@ struct CardView: View {
             Text(scrum.title)
                 .font(.headline)
             Spacer()
-            HStack{
+            HStack {
                 Label("\(scrum.attendees.count)", systemImage: "person.3")
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(Text("Attendees"))
@@ -29,7 +26,7 @@ struct CardView: View {
             .font(.caption)
         }
         .padding()
-        //.foregroundColor(scrum.color.accessibleFontColor)
+        .foregroundColor(scrum.color.accessibleFontColor)
     }
 }
 

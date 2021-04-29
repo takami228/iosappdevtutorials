@@ -1,9 +1,6 @@
-//
-//  DetailView.swift
-//  Scrumdinger
-//
-//  Created by takami228 on 2021/04/29.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
@@ -11,16 +8,16 @@ struct DetailView: View {
     @Binding var scrum: DailyScrum
     @State private var data: DailyScrum.Data = DailyScrum.Data()
     @State private var isPresented = false
-    
     var body: some View {
         List {
-            Section(header: Text("Meeeting Info")){
-                NavigationLink(destination: MeetingView()) {
-                    Label("Start Meeting", systemImage: "timer")
-                        .font(.headline)
-                        .foregroundColor(.accentColor)
-                        .accessibilityLabel(Text("Start meeting"))
-                }
+            Section(header: Text("Meeting Info")) {
+                NavigationLink(
+                    destination: MeetingView(scrum: $scrum)) {
+                        Label("Start Meeting", systemImage: "timer")
+                            .font(.headline)
+                            .foregroundColor(.accentColor)
+                            .accessibilityLabel(Text("Start meeting"))
+                    }
                 HStack {
                     Label("Length", systemImage: "clock")
                         .accessibilityLabel(Text("Meeting length"))
@@ -66,7 +63,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
+        NavigationView {
             DetailView(scrum: .constant(DailyScrum.data[0]))
         }
     }
